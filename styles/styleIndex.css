@@ -1,0 +1,718 @@
+        
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    html{
+        font-size: 16px;
+    }
+
+    body, html{
+        height: 100%;
+        text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2% 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+
+                        /*HEADER*/
+
+    header{
+        width: 85%;
+        margin: 0 auto;
+        flex-shrink: 2;
+    }
+    
+    header>div{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+/*    -----------TITRE ANIME-----------*/
+
+    #titreGratt{
+        position: relative;
+        width: 45vw;
+        min-width: 319.5px;
+        height: 8vw;
+        min-height: 58.08px;
+        margin: 0 auto;
+        
+    }
+
+     #rond{
+        position:absolute;
+        top:49%;
+        left:15%;
+        z-index:2;
+        background-color: red;
+        width: 2vw;
+        min-width: 13px;
+        height:2vw;
+        min-height: 13px;
+        border-radius: 100%;
+    }
+    
+
+        
+   .ligne{
+        width :100%;
+        position: absolute;
+        height:2%;
+        background-color: gainsboro;
+       
+    }
+   
+    .ligne:hover{
+        background-color: #262729;  
+    } 
+
+
+     #ligne1 {
+        top:0%; 
+        left:0;
+        z-index: 1;
+     }
+
+     #ligne2 {
+        top:20%; 
+        left:0;
+     }
+        
+    #ligne3 {
+        top:40%;
+        left:0;
+    }
+        
+    #ligne4 {
+        top:60%;
+        left:0;
+    }
+        
+   #ligne5 {
+        top:80%;
+        left:0;
+    }
+        
+    #ligne6 {
+        top:100%; 
+        left:0;
+    }
+         
+   
+   
+    img.lettre {
+        position: absolute;
+        z-index:2;
+    }
+        
+
+    #G {
+        width: 9%;
+        top: 8%;
+        left:26%;
+    }
+        
+     #R {
+        width: 9%;
+        top: 28%;
+        left: 39%;
+    }
+
+    #A {
+        width: 9%;
+        top: 11%;
+        left:51%;
+    }
+    
+        
+    #T1 {
+        width: 10%;
+        top: 28%;
+        left:62%;
+    }
+        
+        
+    #T2 {
+        width: 8%;
+        top: 15%;
+        left:73%;
+    }
+        
+        
+        
+    #titreGratt:hover #G{
+        animation: G 0.8s linear 0.5s 1;
+    }
+        
+    #titreGratt:hover #R{
+        animation: R 0.8s linear 0.5s 1;
+    }
+        
+    #titreGratt:hover #A{
+        animation: A 0.8s linear 0.5s 1;
+    }
+        
+    #titreGratt:hover #T1{
+        animation: T1 0.8s linear 0.5s 1;
+    }
+        
+    #titreGratt:hover #T2{
+        animation: T2 1.5s linear 0.5s 1;
+    }
+
+    
+    @keyframes G {
+      0%{transform: translateY(0%) rotate(0deg);}
+      5%{transform: translateY(0%) rotate(10deg);}
+      10%{transform: translateY(0%) rotate(20deg);} 
+      35%{transform: translateY(20%) rotate(20deg);}
+      50%{transform: translateY(0%) rotate(20deg);}
+      60%{transform: translateY(-10%) rotate(20deg);}
+      70%{transform: translateY(0%) rotate(20deg);}
+      80%{transform: translateY(10%) rotate(20deg);}
+      90%{transform: translateY(0%) rotate(20deg);}
+      95%{transform: translateY(0%) rotate(10deg);}
+      100%{transform: translateY(0%)  rotate(0deg);}
+        }
+        
+        @keyframes R {
+            
+      0%{transform: translateY(0%) rotate(0deg);}
+      5%{transform: translateY(0%) rotate(-5deg);}
+      35%{transform: translateY(-30%) rotate(-5deg);}
+      50%{transform: translateY(0%) rotate(-5deg);}
+      60%{transform: translateY(10%) rotate(-5deg);}
+      70%{transform: translateY(0%) rotate(-5deg);}
+      80%{transform: translateY(-30%) rotate(-5deg);}
+      90%{transform: translateY(0%) rotate(-5deg);}
+      95%{transform: translateY(10%) rotate(-5deg);}
+      100%{transform: translateY(0%)  rotate(0deg);}
+        }
+
+        
+         @keyframes A {
+             
+      0%{transform: translateY(0%) rotate(0deg);}
+      5%{transform: translateY(0%) rotate(-10deg);}
+      10%{transform: translateY(0%) rotate(-20deg);} 
+      35%{transform: translateY(25%) rotate(-20deg);}
+      50%{transform: translateY(0%) rotate(-20deg);}
+      60%{transform: translateY(-10%) rotate(-20deg);}
+      70%{transform: translateY(0%) rotate(-20deg);}
+      80%{transform: translateY(10%) rotate(-20deg);}
+      90%{transform: translateY(0%) rotate(-20deg);}
+      95%{transform: translateY(0%) rotate(-10deg);}
+      100%{transform: translateY(0%)  rotate(0deg);}
+        }              
+                     
+        
+        @keyframes T1 {
+      0%{transform: translateY(0%) rotate(0deg);}
+      5%{transform: translateY(0%) rotate(-15deg);}
+      35%{transform: translateY(-30%) rotate(-15deg);}
+      50%{transform: translateY(0%) rotate(-15deg);}
+      60%{transform: translateY(10%) rotate(-15deg);}
+      70%{transform: translateY(0%) rotate(-15deg);}
+      80%{transform: translateY(-30%) rotate(-15deg);}
+      90%{transform: translateY(0%) rotate(-15deg);}
+      95%{transform: translateY(10%) rotate(-15deg);}
+      100%{transform: translateY(0%)  rotate(0deg);}
+        }
+        
+        @keyframes T2 {
+      0%{transform: translateY(0%) rotate(0deg);}
+      2%{transform: translateY(0%) rotate(-10deg);}
+      5%{transform: translateY(0%) rotate(-20deg);} 
+      15%{transform: translateY(30%) rotate(-20deg);}
+      20%{transform: translateY(0%) rotate(-20deg);}
+      25%{transform: translateY(-10%) rotate(-20deg);}
+      30%{transform: translateY(0%) rotate(-20deg);}
+      35%{transform: translateY(10%) rotate(-20deg);}
+      40%{transform: translateY(0%) rotate(-20deg);}     
+      45%{transform: translateY(0%) rotate(-10deg);}
+      50%{transform: translateY(0%)  rotate(0deg);}
+            
+      80%{transform: translateY(0%) rotate(0deg);}
+      85%{transform: translateY(-30%) rotate(0deg);}
+      90%{transform: translateY(30%) rotate(0deg);}     
+      95%{transform: translateY(-30%) rotate(0deg);}
+      100%{transform: translateY(0%)  rotate(0deg);}
+        }
+
+
+                                    /*icône son guitare*/
+
+
+    #sound{
+        width: 7vw;
+    }
+
+                                        /*icône contact */
+
+
+
+
+    .fa::before{
+        color: #28BCBF;
+    /*    font-size: 7vw !important;*/
+        font: normal bolder normal 4vw/1 FontAwesome !important;
+
+    }
+
+    h1{
+        width: 100%;
+        font-family: "annie use your telescope", cursive;
+        text-align: center;
+        color: #F05C22;
+        font-size: 1.7vw;
+        
+        padding: 1% 0;
+        padding-left: 3vw;
+    }
+
+                                    /*MAIN*/
+
+    main{
+        width: 85%;
+        margin: 0 auto;
+        padding-bottom: 10%;
+        padding-top: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    /*
+
+    Les deux choix de la nav ils ont à peu près la hauteur des gifs, pour que tout se suive harmonieusement au resize
+    */
+    main > div{
+        width: 40%;
+        position: relative;
+        height: 15vw;
+    }
+
+    /*chaque choix de navigation est constitué d'une image et d'un a tous les deux en absolute par rapport à leur parents #jouer et #informer, pour pouvoir placer chaque a cliquable sous l'image*/
+
+    /*Tailles des images-gifs et leur positionnement*/
+
+    main img{
+       position: absolute;
+        z-index: 5;
+    }
+
+    #menuJouer img{
+        width: 18vw;
+    /*    min-width: 99.88px;*/
+        right: 12%;
+        top:-32%;
+    }
+
+    #menuInformer img{
+        width: 24vw;
+    /*    min-width:138.3px ;*/
+        right: 17%;
+        top:-50%;
+    }
+
+    /*les ronds cliquables */
+
+    main a{
+        display: block;
+        margin: 0 auto;
+        width: 18vw;
+        height: 18vw;
+        border-radius: 100%;
+        text-align: center;
+        padding-top: 25%;
+        font-family: "annie use your telescope", cursive;
+        text-decoration: none;
+        font-size: 2rem;
+        line-height: 1.2rem;
+        position: absolute;
+    }
+
+
+    #menuJouer a{
+        background-color: #F05C22;
+        color: white;  
+        top: 30%; /*position des ronds par rapport aux gifs*/
+        right: 14%;
+    }
+
+    #menuInformer a{
+        background-color: #28BCBF;
+        color: white;
+        top: 30%; /*position des ronds par rapport aux gifs*/
+        right: 22.5%;
+    }
+
+    main span{
+    /*    font-family: 'Nunito', sans-serif;*/
+        font-family: 'myriad pro', sans-serif;
+        font-size: 1.2rem;
+    }
+
+    /*
+
+            FOOTER
+    */
+
+    footer{
+        width: 85%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    h3{
+        text-align: center;  
+        width: 100%;
+        color: #848484;
+        padding-top: 2vw;
+        padding-left: 2vw;
+    }
+
+    h3 span:first-of-type{
+        font-family: "annie use your telescope", cursive;
+        font-size: 1.7vw;
+    }
+
+
+    h3 span:nth-of-type(2){
+        margin: 0 2%;
+    }
+
+    h3 span:nth-of-type(2), h3 span:last-of-type{
+        font-family: "myriad pro", sans-serif;
+        font-size: 1.5vw;
+    }
+
+
+
+/*LOADER*/
+      
+    .loader{
+        /*display: none;*/
+        width: 100%;
+        height:100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background-color: white;
+        text-align: center;
+        padding-top:15vh;
+    }
+
+    .loader svg{
+        width: 20%; 
+    }
+
+    #guitarPath {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 2.5s linear forwards;
+    }
+
+    @keyframes dash {
+        to {stroke-dashoffset: 0;}
+    }  
+
+/*RESPONSIVE*/
+
+/*    points de rupture : 1200 1024 900 720 480*/
+
+/*la place du texte dans la nav*/
+     @media (max-width: 1800px) {
+         main a{
+         padding-top: 35%;
+         }
+     }
+
+     @media (max-width: 1600px) {
+         main a{
+         padding-top: 30%;
+         }
+     }
+
+    @media (max-width: 1400px) {
+         main a{
+         padding-top: 25%;
+         }
+     }
+
+    @media (max-width: 1200px) {
+        
+/*      taille police globale*/
+        html {
+        font-size: 14px;
+        }
+/*        police dans les ronds et les ronds de la nav*/
+        body > main a{
+        line-height: 1rem;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        html {
+        font-size: 13px;
+        }
+/* La taille des ronds de la nav puis la place des personnages*/
+        body > main a{
+        width: 20vw;
+        height: 20vw;
+        }
+        
+        #menuJouer img {
+        right: 16%;
+        }
+        
+        #menuInformer img {
+        right: 19%;
+        }
+        
+        body>main a span{
+        line-height: 1rem;
+        }
+    }
+
+    @media (max-width: 900px) {
+        html {
+        font-size: 12px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        header>h1{
+        font-size: 12px;
+        }
+        
+        h3 span:first-of-type{
+        font-size: 12px;
+        }
+        
+        h3 span:nth-of-type(2), h3 span:last-of-type{
+        font-family: "myriad pro", sans-serif;
+        font-size: 10px;
+        }
+    }
+
+/*     A partir du format smartphone, le body n'est plus en flex pour permettre le scroll, et du coup les éléments ne sont plus répartis harmonieusement dans la hauteur : il faut faire deux media query :  orientations portrait et landscape*/
+    @media (max-width: 720px){
+        body{
+        display: block;
+        }
+        
+        main{
+        height: 70%;
+        margin-bottom: 5%;
+        }
+        
+        html {
+        font-size: 11px;
+        }
+        
+        h3 span:nth-of-type(2){
+        display: none;
+        }
+    }
+
+    @media (max-width: 640px) {
+        html{
+        font-size: 8px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        html{
+        font-size: 8px;
+        }
+        
+        header > h1{
+        font-size: 10px;
+        }
+        
+        header > h1 span:first-of-type{
+        display: none;
+        }
+        
+        header > h1 span:last-of-type{
+        text-transform: capitalize;
+        }
+        
+        main{
+        height: 50%;
+        margin-bottom: 0;
+        }
+        
+        body > main a{
+        width: 22vw;
+        height: 22vw;
+        
+        }
+        
+        #menuJouer img {
+        right: 14%;
+        }
+        
+        #menuInformer img {
+        right: 21%;
+        }
+        
+        #titreGratt {
+        min-width: 200px;
+        }
+        
+        header>div {
+        width: 80%;
+        margin: 0 auto;
+        }
+        
+        header>div .ligne{
+        display: none;
+        }
+        
+        #rond {
+        position: absolute;
+        top: 40%;
+        }
+        
+        h3{
+        font-size: 10px;
+        }
+        
+        
+    }
+
+    @media (max-width: 420px) {
+        
+        header #sound{
+        width: 26px;
+        }
+        
+        .fa::before {
+        color: #28BCBF;
+        font: normal bolder normal 15px/1 FontAwesome !important;
+        }
+        
+        body > main a{
+        width: 22vw;
+        }
+    }
+        
+    @media (max-width: 360px) {
+        
+        body{
+        min-height: 515px;
+        }
+        
+    }
+            
+        
+/*
+        body > main #menuJouer a{
+        background-color: white;
+        color: #2EA6DD;
+        border-radius: 0%;
+        }
+        
+        body > main #menuInformer a{
+        background-color: white;
+        color: #2EA6DD;
+        border-radius: 0%;
+        }
+        
+        main #menuInformer img{
+        width: 120px;
+        }
+        
+        main #menuJouer img{
+        width: 100px;
+        }
+*/
+        
+        h3{
+        font-size: 8px;
+        }
+    }
+
+    @media (orientation: portrait){
+        main{
+        display: block;
+        padding: 0;
+        }
+        
+        main > div {
+        width: 100%;
+        position: static;
+        display: block;
+        height: 30%;
+        }
+        
+        #menuInformer, #menuJouer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        }
+        
+        #menuInformer{
+        flex-direction: row-reverse;  
+        }
+        
+/*
+        main img{
+        flex-shrink: 2;
+        }
+*/
+        
+        main #menuInformer img{
+        width: 120px;
+        margin: 0;
+        position: static;
+        display: inline-block;
+        }
+        
+        #menuInformer a, #menuJouer a{
+        position: static;
+        padding: 0;
+        padding-top: 35px;
+        margin: 0;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        }
+        
+        main #menuJouer img{
+        position: static;
+        width: 100px;
+        margin: 0;
+        display: inline-block;
+        }
+        
+    }
+    
+
+
+
+    
+   

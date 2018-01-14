@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <title>Menu des jeux</title>
+    <!--    Meta pour le responsive : -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <link rel="stylesheet" href="styles/normalize.css"/>
+    <link rel="stylesheet" href="styles/styleJouer.css">
+    <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope" rel="stylesheet"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!--    fallback si le lien ne marchait pas-->
+    <script src="./scripts/jquery-3.1.0.min.js"></script>
+    <script src="scripts/scriptJouer.js" type="text/javascript"></script>
+</head>
+
+<body>
+ 
+    <header>
+       <a href="index.html"><img src="images/logos/logoPointGrattMiniature2.svg" alt="Logo"/></a> 
+       <h3>L'école de guitare<span id="titreASuppr"> pour les enfants de 6 à 12 ans</span></h3>
+    </header>
+          
+   
+     <main>
+    
+      
+               
+<!--
+               <div id="sousTitre">
+                      
+                      <p> Choisis un jeu !</p>
+                </div>
+-->
+                
+                <div id="jeux">
+                   
+                    <div id="lapinPresente">
+                       <h3>Choisis un jeu !</h3>
+                        <p>Notre philosophie :<br/>apprendre<br/>la guitare<br/>en s'amusant !</p>
+                        <img src="./images/monstres/AnimSvgmonstreRose.svg" alt="lapin rose">
+                    </div>
+                   
+                    <article>
+                    <a href="jeuAnatomie.html">
+                    <img id="main1" src="images/icones/mainJeuGuitare7.svg" alt="main">
+                    <img id="main2" src="images/icones/mainJeuGuitare8.svg" alt="main">
+                    </a>
+                      <a href="jeuAnatomie.html"><span class="aSuppr">Jeu de la </span>gratt</a>
+                    <p>
+                      <span class="aSuppr">Chez .Gratt<br/>on joue de la <br/>guitare acoustique<br/></span><strong>Clique <span class="aSuppr">et zoome</br></span>pour découvrir<br/>ta gratt</strong>
+                    </p>
+                    </article>
+                    <article>
+                    <a href="jeuSimon.html"><img src="images/icones/notesJeuSimon.svg" alt="notes"></a>
+                      <a href="jeuSimon.html"><span class="aSuppr">Jeu du </span>Simon</a>
+                    <p>
+                        <strong>Répète<br/>chaque note</br>après moi</strong><br/>
+                        <span class="aSuppr">c'est le principe</br>du jeu du Simon</br>version .Gratt</span>
+                    </p>
+                    </article>
+                    <article>
+                    <a href="jeuAccord.html">
+                        <svg id="gommettes" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="-429 231 100 100" style="enable-background:new -429 231 100 100;" xml:space="preserve">
+                        <path class="st0" d="M-2084.5,1376.1c0-0.3,0-0.5,0-0.6V1376.1z"/>
+                        <circle id="cercle1" class="st1" cx="-386.9" cy="291.8" r="7.8"/>
+                        <circle id="cercle2" class="st2" cx="-375" cy="304.2" r="7.8"/>
+                        <circle id="cercle3" class="st3" cx="-372.8" cy="283.2" r="7.8"/>
+                        </svg>
+                    </a>
+                        <a href="jeuAccord.html"><span class="aSuppr">Jeu des </span>accords</a>
+                    <p>
+                        <strong>Utilise des</br>gommettes<br/>de couleur</strong><br/><span class="aSuppr">pour placer<br/> tes doigts<br/>sur le manche<br/></span>
+                    </p>
+                    </article>
+                 </div> 
+                <a href=""><img src="images/icones/iconeSonDroite0.svg" id="sound"  alt="icône guitare" title="Pour mettre du son !"/></a>
+             
+               
+     </main>
+     
+     <footer>
+         <div>
+            <h3><span>Ecole de guitare .Gratt </span><span>rue de la musique 1 - 7800 Ath</span><span> ecole.gratt@gmail.com</span></h3>
+         </div>
+<!--                le monstre qui renvoie au menu informer-->
+        <a href="./informer.html">
+            <svg version="1.1" id="mauve" x="0px" y="0px"
+            viewBox="-451 246.6 56.8 86" style="enable-background:new -451 246.6 56.8 86;" xml:space="preserve">
+            <g id="Layer_2">
+            <g id="Layer_1-2">
+            <path class="st0" d="M-414.9,270.1c0-0.2,0-0.5,0-0.5V270.1z"/>
+            <path class="st0" d="M-415.4,271.1c0-0.2,0-0.4,0-0.5V271.1z"/>
+            <path class="st1" d="M-441.5,283.8c0,0-1.6-3.7,0-4.8c0,0,0.6,2.2,1.3,2.3c6.5,1.7,13.2,2.7,20,2.8c9.7,0,8.7,0,11.2-0.8
+            c2.4-0.9,4.6-2.4,6.4-4.3c0,0,1.1,0.7,0,4.4l-11,9.9h-23.1L-441.5,283.8z"/>
+            <path class="st1" d="M-440.2,280.7c0,0-0.6-4.8,4.1-10.7c0,0-0.6-8.2,4.1-12.8c0,0-3.3-2.8,0.8-8.7c0,0,2.4-1.2,1.9,1.9
+            s2.7,5.1,2.7,5.1s8.4-1.4,12.7,0.3c0,0,4.5-3.4,2.1-4.9c0,0,0-3.4,3.4,0.2c0,0,2.8,2.3,0,7.9c2.2,3.7,3.2,8,2.7,12.3
+            c0,0,2.7,7.2,2.2,8.3c-0.5,1.1-7.2,4.3-12.7,4.2c-4.6,0.2-9.2-0.1-13.8-0.8C-433.4,282.3-436.8,281.6-440.2,280.7z"/>
+            <path class="st2" d="M-429.9,269.1h18c0,0,1.1,8.8-8.8,9C-420.7,278.1-429.6,279.1-429.9,269.1z"/>
+            <path class="st3" d="M-425.2,269.1h9c0,0,0.5,4.4-4.4,4.5C-420.6,273.6-425,274.1-425.2,269.1z"/>
+            <path d="M-423,269.1h4.3c0.1,1-0.6,2-1.6,2.2c-0.2,0-0.3,0-0.5,0c-1.1,0.1-2.1-0.7-2.2-1.8C-423,269.4-423,269.2-423,269.1z"/>
+            <path class="st2" d="M-434.1,282.1c0,0-0.1-1.7,2.1-4.2c0,0,0,4.6,1.9,4.9L-434.1,282.1z"/>
+            <path class="st2" d="M-407.3,281.8c0,0-0.2-1.8-2.9-3.9c0,0,0.8,4.5-1,5.1c0.8-0.1,1.6-0.3,2.4-0.6
+            C-407.9,282.1-407.3,281.8-407.3,281.8z"/>
+            <polygon class="st4" points="-444.6,307.9 -428.1,314.7 -426.3,290.9 -444.6,282.4 		"/>
+            <path class="st5" d="M-428.1,314.7c2.9,1.8,6.5,1.8,9.5,0l1.6-23.8c0,0-6.6-1.2-9.2,0L-428.1,314.7z"/>
+            <path class="st6" d="M-416.2,290.6l16.9-8.9l-2.4,25.3c0,0-13.8,7.3-17.1,7.7l1.6-23.8L-416.2,290.6z"/>
+            <path id="_Rectangle_" class="st7" d="M-448.8,291.1h5.2c0.5,0,0.9,0.4,0.9,0.9l0,0v7.9c0,0.5-0.4,0.9-0.9,0.9l0,0h-5
+            c-1.3,0-2.4-1.1-2.4-2.4v-5.2C-450.9,292-450,291.1-448.8,291.1L-448.8,291.1L-448.8,291.1z"/>
+            <path id="_Path_" class="st8" d="M-441.5,293v0.3c0,0.8-0.5,1.4-1.3,1.5l0,0c-0.8,0.1-1.4-0.5-1.5-1.3v-0.3c0-0.8,0.5-1.4,1.3-1.5
+            l0,0C-442.3,291.6-441.6,292.2-441.5,293z"/>
+            <path id="_Rectangle_2" class="st8" d="M-443.8,294.9h1.5c0.4,0,0.6,0.3,0.6,0.6v1.5c0,0.4-0.3,0.6-0.6,0.6h-1.5
+            c-0.4,0-0.6-0.3-0.6-0.6v-1.5C-444.5,295.2-444.2,294.9-443.8,294.9z"/>
+            <path id="_Rectangle_3" class="st8" d="M-443.8,298h2.2c0.4,0,0.6,0.3,0.6,0.6v1.5c0,0.4-0.3,0.6-0.6,0.6h-2.2
+            c-0.4,0-0.6-0.3-0.6-0.6v-1.5C-444.5,298.3-444.2,298-443.8,298z"/>
+            <path id="_Rectangle_4" class="st7" d="M-396.4,300.8l-4.3-0.1c-0.5,0-0.9-0.4-0.9-0.9l0,0l0.1-7.9c0-0.5,0.4-0.9,0.9-0.9l0,0
+            l4,0.1c1.3,0,2.4,1.1,2.4,2.4l0,0l-0.1,5.2C-394.2,299.9-395.2,300.8-396.4,300.8L-396.4,300.8z"/>
+            <path id="_Rectangle_5" class="st8" d="M-400.7,300.4h-1.8c-0.4,0-0.6-0.3-0.6-0.6v-1.5c0-0.4,0.3-0.6,0.6-0.6h1.8
+            c0.4,0,0.6,0.3,0.6,0.6v1.5C-400.1,300.1-400.4,300.4-400.7,300.4z"/>
+            <path id="_Rectangle_6" class="st8" d="M-400.7,297.3h-1.5c-0.4,0-0.6-0.3-0.6-0.6v-1.5c0-0.4,0.3-0.6,0.6-0.6h1.5
+            c0.4,0,0.6,0.3,0.6,0.6v1.5C-400,297-400.3,297.3-400.7,297.3z"/>
+            <path id="_Rectangle_7" class="st8" d="M-400.6,294.2h-2.2c-0.4,0-0.6-0.3-0.6-0.6v-1.5c0-0.4,0.3-0.6,0.6-0.6h2.2
+            c0.4,0,0.6,0.3,0.6,0.6v1.5C-400,293.9-400.3,294.2-400.6,294.2z"/>
+            </g>
+            </g>
+            <rect id="paupiere" x="-431.4" y="256.6" class="st1" width="21" height="11.4"/>
+            <text transform="matrix(0.9758 0 0 1 -448 330.6174)" class="st9 st10 st11">INFOS</text>
+            </svg>
+        </a>   
+              
+         
+     </footer>
+      
+</body>
+</html>

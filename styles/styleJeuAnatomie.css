@@ -1,0 +1,652 @@
+@import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0; 
+}
+
+html {
+    font-size: 16px;
+}
+
+body, html{
+/*Pour que le display flex sur le body fonctionne, il faut donner une hauteur*/
+     height: 100%; 
+}
+
+body {
+ /*    Une largeur max en px mais pas de largeur fixe pour un max de responsive*/
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/*Header en flex */
+header {
+     display:flex;
+    justify-content: space-between;
+    align-items: center;
+/*    La largeur en pourcentage par rapport au parent donc au body*/
+    width: 85%;
+/*    height: 5vh;*/
+    font-family: 'Annie use your telescope', serif;
+    padding-top: 2vw;
+    margin: 0 auto; 
+/*    Plus besoin de cette règle avec le body en display flex mais on garde si on faisait sauter le flex*/
+
+}
+
+
+
+
+/*.gratt*/
+header > a  {
+    display: block;
+    width : 10%;
+    min-width: 3rem;
+    text-align: center;  
+}
+
+/*titre ecole de guitare...*/
+header > h3 {
+    color:#F05C22;
+    font-size:1rem;
+  
+}
+
+#sousTitre{
+    text-align:center;
+    position:absolute;
+    top:8%;
+    left:15%;
+    width:59vw;
+    height:10vw;
+}
+
+#sousTitre p{
+    
+/*    font-size: 1.2rem;*/
+    
+    font-weight: bold;
+    color: #2EA6DD;
+    font-family: 'Annie use your telescope', serif;
+    margin-bottom: 2%;
+    height:10vw;
+}
+
+#guitar{
+    width: 70%;
+    height:100%; 
+    position: relative;
+    margin-left: 5%; 
+    margin-bottom:3%;
+}
+
+
+#guitareAnatomie{
+    display:block;
+    position:absolute;
+   width:23vw;
+    left:-3.5vw;
+    top:-3vw;
+}
+
+main {
+    /*    Toujours la même largeur pour le main, le header et le footer comme ça c'est aligné. Et on centre avec le margin. Cette fois on sépare aussi le top et le bottom du main du header et du footer de 2vw;*/
+    width:85%;
+    margin:2vw auto;
+    /*    Je mets du padding en %, comme pour la taille du lapin, comme ça ça suit quand on resize. Ce padding est nécessaire car plus bas dans le code je fais sortir des éléments d'une div et du coup ils dépassent du main. En rajoutant du padding je contre-carre cet effet.*/
+    padding-top:14%;
+    padding-bottom: 2%;
+    
+    /*    Avec les padding suivants je décole les enfants de mon main des bords. Comme le main a une couleur, ça fait bizarre si les éléments sont collés au bord.*/
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: rgba(17, 156, 225, 0.27);
+    border-radius:15px;
+    /*    Position relative pour pouvoir mettre certains enfants en absolute.*/
+    position:relative;
+    
+/*    a définir ?*/
+    height: 38vw;
+}
+
+/*Je mets le nom du jeu en absolute en haut à gauche*/
+
+.nomJeu{
+  width: 13%;
+  position: absolute;
+  top: 3%;
+  left:3%;
+  border-bottom:  rgba(59, 61, 61, 0.39) 0.2rem solid;
+  padding: 1% 0;
+}
+.nomJeu p {
+    color:#3EB44A;
+    text-align: center;
+    /*font-family: 'Annie use your telescope', serif;*/
+font-family: "orator std", sans-serif;
+font-size:em;1.5em
+    font-weight:bold;
+}
+
+
+/*Je place l'icône jouer en haut à droite de mon main*/
+main >a {
+    display:block;
+    width:10%;
+    min-width: 3rem;
+     text-align: center;
+    position:absolute;
+    top:5%;
+    right:3%;
+}
+
+
+/*icone jouer lapin*/
+  
+
+
+    #jouer .st0{fill:#F5A4B6;}
+	#jouer .st1{fill:#FFFFFF;}
+	#jouer .st2{fill:#2EA6DD;}
+	#jouer .st3{fill:#736D9F;}
+	#jouer .st4{opacity:0.76;fill:#FFFFFF;enable-background:new    ;}
+	#jouer .st5{opacity:0.8;fill:#FFFFFF;enable-background:new    ;}
+	#jouer .st6{fill:#F59222;}
+	#jouer .st7{fill:#2EA6DD;fill-opacity:0;}
+	#jouer .st8{fill:#F59222;stroke:#F59222;stroke-width:0.5;}
+	#jouer .st9{font-family:'OratorStd';}
+	#jouer .st10{font-size:17.0812px;}
+    
+    
+   
+    
+     @keyframes boucheSiffle{
+    0%, 100%{transform: translate(-100%, 0); fill:#F5A4B6;}
+    10%{transform: translate(-150%, -54%); fill:#FFFFFF; }
+    30%{transform: translate(-150%, -54%); fill:#FFFFFF;}
+    31%{transform: translate(-100%, 0); fill:#F5A4B6; }
+    }
+    
+    @keyframes jouesRoses{
+    0%, 100%{fill:#F5A4B6;}
+    5%{fill:#ef2c57;}
+    30%{fill:#ef2c57;}
+    31%{fill:#F5A4B6;}
+    }
+    
+    @keyframes note1{
+    0%, 100%{opacity:0;}
+    5%{opacity:1;}
+    20%{opacity:1;}
+    21%{opacity:0;}
+    }
+    
+    @keyframes note2{
+    0%, 100%{opacity:0;}
+    10%{opacity:1;}
+    30%{opacity:1;}
+    35%{opacity:0;}
+    }
+    
+    @keyframes jouesGrosses{
+    0%, 100%{transform: scale(1);}
+    5%{transform: scale(1.1, 1.1);}
+    30%{transform: scale(1.1, 1.1);}
+    31%{transform: scale(1);}
+    }
+    
+    @keyframes disapear {
+    0%, 100%{fill:#FFFFFF;}
+    1%{fill:#F5A4B6;}
+    31%{fill:#F5A4B6;}
+    32%{fill:#FFFFFF;}
+    }
+    
+    #bouche{
+    transform: translateX(-100%);
+    animation: boucheSiffle 10s linear 5s infinite;
+    }
+    
+    #joues ellipse{
+    animation: jouesRoses 10s linear 5s infinite;
+    
+    }
+    
+    #joues{
+    animation: jouesGrosses 10s linear 5s infinite;
+    transform-origin: center center;
+    }
+    
+    #sourire{
+    animation: disapear 10s linear 5s infinite;
+    }
+    
+    #note1{
+    opacity:0;
+    animation: note1 10s linear 5s infinite;
+    }
+    
+    #note2{
+    opacity:0;
+    animation: note2 10s linear 5s infinite;
+    }
+
+/*C'est parti pour la div "centre" !*/
+#centre  {
+   /*    centre fait 100% de son parent main en largeur et en hauteur;*/
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+
+/*L'aside enfant de centre fait 10% de son parent centre. Aside est lui même en flex.*/
+aside {
+       width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 120%;
+    
+}
+
+/*rond en gros*/
+aside > a{
+    display: block;
+    width: 6.5vw;
+    height: 6.5vw;
+    border-radius: 100%;
+/*    Pour centrer le texte dans les a on utilise du padding et le text-align   */
+/*    padding: 3.5vw 0;*/
+    text-align: center;
+/*
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "myriad pro", sans-serif;
+*/
+/*    font-family: "orator std", sans-serif;*/
+}
+
+
+
+/*rond anatomie orange*/
+aside > a:first-of-type {
+    background-color: #F59222;
+/*    background-color: #F05C22;*/
+     background-image: url(../images/icones/iconesJeuAnatomie2.svg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1vw solid #F05C22;
+    width: 7vw;
+    height: 7vw;
+} 
+
+/*rond simon vert*/
+aside > a:nth-of-type(2) {
+    background-color:#3EB44A;
+    background-image: url(../images/icones/iconesJeuSimon2.svg);
+    
+}
+
+/*rond accords bleu*/
+aside > a:nth-of-type(3) {
+    background-color:#2EA6DD;
+    
+/*    border: 1vw solid #9854A0;*/
+ 
+    border-radius:100%; 
+/*    padding: 3vw 0;*/
+    background-image: url(../images/icones/iconesJeuAccord2.svg);
+    
+}
+
+/*Lapin, sous-titre(ce que dit le lapin et le boutton) et cordes sont tous en absolute par rapport au parent guitare.*/
+
+
+/*lapin*/
+#lapin {
+    width: 17vw;
+    z-index:5;
+    position:absolute;
+    top:38%;
+    left:64%;
+    transform:rotateY(180deg);
+    
+
+/*    display:none;*/
+}
+
+#tete{
+    background-color:#45b9c1;
+    border:solid 0.3vw white;
+    width:2vw;
+    height:2vw;
+    border-radius:50% 50%;
+    display:flex;
+    position:absolute;
+    top:0vw;
+    left:5.5vw;
+    z-index:2;
+}
+
+#teteZoom{
+    width:60%;
+    position:absolute;
+    top:1vw;
+    left:32%;
+    display:none;
+}
+
+#manche{
+     background-color:#e40931;
+    border:solid 0.3vw white;
+    width:2vw;
+        height:2vw;
+    border-radius:50% 50%;
+    display:flex;
+    position:absolute;
+    top:8vw;
+    left:6vw;
+}
+#mancheZoom{
+    width:60%;
+    position:absolute;
+    top:1vw;
+    left:29%;
+    display:none;
+}
+
+#caisse{
+      background-color:#3eb44a;
+     border:solid 0.3vw white;
+    width:2vw;
+    height:2vw;
+    border-radius:50% 50%;
+    display:flex;
+    position:absolute;
+    top:18vw;
+    left:6vw;
+}
+
+#caisseZoom{
+    width:60%;
+    position:absolute;
+    top:2vw;
+    left:28%;
+    display:none;
+}
+
+/*Le menu de droite*/
+
+#asideDroit {
+    width:  6%;
+    height: auto;
+    align-self: center;
+    position: relative;
+    top: 19%;
+    right: -2%;
+}
+
+/*Dans lequel on n'a que l'icône son, cliquable donc dans un a
+#asideDroit a {
+    display:block;
+    text-align:center;
+    width: 100%;
+}
+
+
+/*icône son*/
+#sound{
+    width: 130%;
+    min-width: 2rem;
+}
+
+
+footer{
+   margin: 0 auto;
+    width: 85%;
+/*    height: 9vh;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2vw;
+}
+
+footer div{
+    width: 90%;
+}
+
+footer div > h3{
+  text-align: left;  
+  width: 100%;
+  color: #848484;
+}
+
+h3 span:first-of-type{
+   font-family: "annie use your telescope", cursive;
+   font-size: 1rem;
+}
+
+
+h3 span:nth-of-type(2){
+  margin: 0 2%;
+}
+
+h3 span:nth-of-type(2), h3 span:last-of-type{
+/*  font-family: "myriad pro", sans-serif;*/
+  font-size: 0.8rem;
+}
+
+footer a{
+    width:9%;
+    text-align: right;
+    min-width: 2rem;
+    padding-right: 3%;
+}
+ .messagePaysage{
+        display:none;
+    }
+
+/*icone informer monstre mauve miniature*/
+
+/*
+#mauve {
+    width: 3rem;
+}
+*/
+
+#mauve .st0{fill:#F59221;}
+#mauve .st1{fill:#9854A0;}
+#mauve .st2{fill:#FFFFFF;}
+#mauve .st3{fill:#53C7E9;}
+#mauve .st4{fill:#2EA6DD;}
+#mauve .st5{fill:#F59222;}
+#mauve .st6{fill:#3EB44A;}
+#mauve .st7{fill:#9954A0;}
+#mauve .st8{fill:#CB9EC8;stroke:#FFFFFF;stroke-width:0.25;stroke-miterlimit:10;}
+#mauve .st9{fill:#F59222;stroke:#F59222;stroke-width:0.5;}
+#mauve .st10{font-family:'OratorStd';}
+#mauve .st11{font-size:17.0812px;}
+    
+    
+#paupiere{
+animation: paupiere 5s linear 3s infinite;
+}
+
+@keyframes paupiere {
+    0%{transform: translateY(0%);}
+    2%{transform: translateY(100%);}
+    4%{transform: translateY(100%)}
+    5%{transform: translateY(0%)}
+    100%{transform: translateY(0%)}
+}
+
+
+/*Tentative responsive "jeux"
+points de rupture : 1024 900 720 480*/
+@media (max-width: 1030px) {
+    #teteZoom{
+        top:-2vw;
+    }
+    #mancheZoom{
+         top:-1.2vw;
+    }
+    #caisseZoom{
+        top:-1.2vw;
+    }
+}
+
+@media (max-width: 768px) and (orientation:portrait){
+    header , footer {
+        height:15%;
+        width:90%;
+    }
+    main{
+        height:80%;
+        padding-top:28vh;
+        width:90%;
+    }
+    body main > #centre {
+        width:90%;
+        height:64vw;
+        flex-direction:column-reverse;
+        justify-content:space-between;
+        align-items:center;
+        margin-top:-32%;
+            width: 83%;
+    }
+    
+    #teteZoom , #mancheZoom, #caisseZoom{
+        top: -2vw;
+        margin-top: 5%;
+        width:83%;
+    }
+    
+    #sousTitre p{
+        margin-top: 5%;
+    }
+    
+     #centre aside{
+        flex-direction: row;
+        width:100%;
+         height: 26%;
+    }
+    
+    #sound{
+            margin-left: 43vw;
+        
+    }
+    
+    #centre aside a{
+     width:10vw;
+        height:10vw;
+        flex-direction:row;
+        margin-top: 12%;
+    margin-left: 10%;
+    }
+    
+    #guitar{
+      top:20%;   
+    }
+    
+    #lapin{
+          left: 94%;  
+    }
+    
+    #guitareAnatomie{
+    width: 34vw;
+    left: -8vw;
+    top: -8%;
+    }
+    
+
+    .messagePaysage{
+        display:block;
+        width:80%;
+        margin:6vh auto 0;
+        background-color:white;
+        border-radius:12px;
+        padding:5%;
+    }
+    
+    .messagePaysage p {
+    font-size: 1.6rem;
+    font-family: 'myriad pro', sans-serif;
+    color: #9854A0;
+    text-align: center;
+    line-height: 1.8;
+    font-weight: bold;
+}
+   
+}
+
+@media (max-width: 640px) and (orientation:portrait){
+  html {
+   font-size: 10px;
+  }
+    main {
+        padding-bottom:2%;
+        height: 108%;
+    }
+    
+    main p {
+        padding-top:0;
+        padding-bottom:0;
+        line-height:1;
+    }
+     .messagePaysage{
+        display: block;
+        width: 80%;
+        margin: 21% auto 0;
+        background-color: white;
+        border-radius: 12px;
+        padding: 5%;
+        }
+
+        
+        .messagePaysage p{
+        font-size: 1.6rem;
+        font-family: 'myriad pro', sans-serif;
+        color: #9854A0;
+        text-align: center;
+        line-height: 1.8;
+        font-weight: bold;
+        }
+    #sousTitre p {
+     margin-top: 4%;
+    height: 55%;
+    font-size: 1.5em; 
+    }
+  
+    aside{
+        margin-top: 81%;
+        margin-left: 10%;
+    }
+    #lapin{
+       margin-top: 48%; 
+    }
+    
+    #teteZoom , #mancheZoom, #caisseZoom{
+        margin-top: 5%;
+        width:105%;
+    }
+    
+    .nomJeu p {
+       font-size:1.3vw;
+        
+    }
+}
+
+ 
+
+

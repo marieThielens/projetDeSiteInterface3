@@ -1,0 +1,750 @@
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0; 
+}
+
+html {
+    font-size: 16px;
+}
+
+body, html{
+        height: 100%;
+        -moz-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+}
+
+body {
+    /*    Une largeur max en px mais pas de largeur fixe pour un max de responsive*/
+    max-width: 1200px;
+    margin: 0 auto;
+    /*
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    */
+}
+
+
+/*Header en flex */
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+/*    La largeur en pourcentage par rapport au parent donc au body*/
+    width: 85%;
+    font-family: 'Annie use your telescope', serif;
+    padding-top: 1%;
+    margin: 0 auto; 
+}
+
+/*Taille du logo.*/
+header > a {
+    display: block;
+    width : 12%;
+    min-width: 50px;
+    text-align: center;
+}
+
+
+/*titre ecole de guitare...*/
+header > h3 {
+    color:#F05C22;
+    font-size:1.6rem;
+    text-align: right;
+}
+
+
+
+main {
+    width:85%;
+    margin:2vw auto;
+    padding: 2%;
+    background-color: rgba(17, 156, 225, 0.27);
+    border-radius:15px;
+    /*    Position relative pour pouvoir mettre certains enfants en absolute.*/
+    position:relative;
+    height: 40vw;
+}
+
+
+/*La div où se trouve l'explication des jeux*/
+#jeux {
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-right: 2%;
+}
+
+#jeux a:last-of-type{
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Annie use your telescope', serif;
+/*    font-family: 'Orator std', sans-serif;*/
+    text-align: center;
+    /*border-bottom:  rgba(59, 61, 61, 0.39) 0.2rem solid;*/
+}
+
+
+#lapinPresente{
+    width: 25%;
+    align-self: flex-end;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+#lapinPresente img{
+    width: 100%;
+    height: 50%;
+}
+
+#lapinPresente h3{
+    color:#F05C22;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Annie use your telescope', serif;
+}
+
+#lapinPresente p{
+    font-size: 1.5rem;
+    color: #2EA6DD;
+    font-family: 'Annie use your telescope', serif;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+}
+
+article {
+    width: 24%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+/*ronds*/
+article > a:first-of-type{
+    display: block;
+    width: 13vw;
+    height: 13vw;
+    border-radius: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/*rond anatomie orange*/
+article:nth-of-type(1) > a:first-of-type {
+    background-color: #F59222;
+    background-image: url(../images/icones/iconesJeuGuitare.svg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+
+article:nth-of-type(1) #main1{
+    width: 30%;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+
+article:nth-of-type(1) #main2{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    right: 6%;
+}
+
+article:nth-of-type(1) > a:first-of-type:hover #main1{
+    animation: main1 1.5s linear 0.2s infinite; 
+}
+
+article:nth-of-type(1) > a:first-of-type:hover #main2{
+    animation: main2 1.5s linear 1s infinite; 
+}
+        
+@keyframes main1{
+    0%, 100%{transform: translate(0%, 0%);}
+        30%{transform: translate(0%, 0%);}
+        45%{transform: translate(45%, -45%);}
+        60%{transform: translate(45%, -45%);}
+        70%{transform: translate(0%, 0%);}
+}
+
+@keyframes main2{
+    0%, 100%{transform: translateX(0%);}
+        30%{transform: translateX(0%);}
+        45%{transform: translateX(-50%);}
+        60%{transform: translateX(-50%);}
+        70%{transform: translateX(0%);}
+}
+
+article:nth-of-type(1) a:last-of-type{
+/*    color: #db821e;*/
+    color: #F59222;
+/*    border-bottom:  #F59222 0.2rem solid;*/
+}
+
+article:nth-of-type(1) strong{
+    color: #F59222;
+}
+
+/*rond simon vert*/
+article:nth-of-type(2) > a:first-of-type {
+    background-color:#3EB44A;
+    background-image: url(../images/icones/iconesJeuSimon.svg);
+/*    position: relative;*/
+}
+
+article:nth-of-type(2) img{
+/*    position: absolute;*/
+    width: 100%;
+}
+
+article:nth-of-type(2) a:first-of-type:hover img{
+    animation: notes 2.5s linear 0.2s infinite; 
+}
+        
+@keyframes notes{
+    0%, 100%{transform: scale(1) rotate(0deg);}
+    5%{transform: scale(1.2, 1.2) rotate(0deg);}
+    10%{transform: scale(1.2, 1.2) rotate(-25deg);}
+    20%{transform: scale(1.2, 1.2) rotate(25deg);}
+    30%{transform: scale(1.2, 1.2) rotate(0);}
+    40%{transform: scale(1) rotate(0deg);}
+}
+
+article:nth-of-type(2) a:last-of-type{
+    color: #3EB44A;
+}
+
+article:nth-of-type(2) strong{
+    color: #3EB44A;
+}
+
+/*rond accords violet*/
+article:nth-of-type(3) a:first-of-type {
+/*    background-color: #2EA6DD;*/
+    background-color : #9854A0;
+    background-image: url(../images/icones/iconesJeuAccords.svg);
+    background-repeat: no-repeat;
+    background-size: 115%;
+    background-position: 50% 0%; 
+    position: relative;
+}
+
+article:nth-of-type(3) svg{
+    width: 120%;
+    position: absolute;
+    right: -10%;
+}
+
+#gommettes .st0{fill:#F59221;}
+#gommettes .st1{fill:#2EA6DD;}
+#gommettes .st2{fill:#3EB44A;}
+#gommettes .st3{fill:#F59222;}
+
+
+article:nth-of-type(3) a:first-of-type:hover #cercle1{
+    animation: cercle1 1.5s linear 0s infinite; 
+}
+
+@keyframes cercle1{
+    0%, 100%{fill:#2EA6DD;}
+    33%{fill:#2EA6DD;}
+    34%{fill:#3EB44A;}
+    66%{fill:#3EB44A;}
+    67%{fill:#F59222;}
+    99%{fill:#F59222;}
+}
+
+article:nth-of-type(3) a:first-of-type:hover #cercle2{
+    animation: cercle2 1.5s linear 0s infinite; 
+}
+
+@keyframes cercle2{
+    0%, 100%{fill:#3EB44A;}
+    33%{fill:#3EB44A;}
+    34%{fill:#F59222;}
+    66%{fill:#F59222;}
+    67%{fill:#2EA6DD;}
+    99%{fill:#2EA6DD;}
+}
+
+article:nth-of-type(3) a:first-of-type:hover #cercle3{
+    animation: cercle3 1.5s linear 0s infinite; 
+}
+
+@keyframes cercle3{
+    0%, 100%{fill:#F59222;}
+    33%{fill:#F59222;}
+    34%{fill:#2EA6DD;}
+    66%{fill:#2EA6DD;}
+    67%{fill:#3EB44A;}
+    99%{fill:#3EB44A;}
+}
+
+
+
+article:nth-of-type(3) a:last-of-type{
+/*    color: #2EA6DD;*/
+    color: #9854A0;
+}
+
+article:nth-of-type(3) strong{
+    color: #9854A0;
+}
+article > p {
+        
+    font-size: 1.6rem;
+    color: #2EA6DD;
+    font-family: 'Myriad pro', sans-serif;
+    width: 100%;
+    text-align: center;
+    height: 40%;
+}
+
+
+/*icône son*/
+main > a{
+    display:block;
+    width:6%;
+    text-align: center;
+    position:absolute;
+    top: 5%;
+    right:1%;
+    transform: rotate(-80deg);
+}
+
+#sound{
+    width: 100%;
+    min-width: 26px;
+}
+
+
+footer{
+    margin: 0 auto;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3%;
+}
+
+footer div{
+    width: 90%;
+    padding-bottom: 2%;
+}
+
+footer div > h3{
+  text-align: left;  
+  width: 100%;
+  color: #848484;
+}
+
+footer h3 span:first-of-type{
+   font-family: "annie use your telescope", cursive;
+   font-size: 1.6rem;
+}
+
+
+footer h3 span:nth-of-type(2){
+  margin: 0 2%;
+}
+
+footer h3 span:nth-of-type(2), footer h3 span:last-of-type{
+  font-family: "myriad pro", sans-serif;
+  font-size: 1rem;
+}
+
+footer a{
+    width:8%;
+    text-align: right;
+     min-width: 35px;
+    padding-right: 3%;
+}
+
+/*icone informer monstre mauve miniature*/
+
+/*
+#mauve {
+    width: 3rem;
+}
+*/
+
+#mauve .st0{fill:#F59221;}
+#mauve .st1{fill:#9854A0;}
+#mauve .st2{fill:#FFFFFF;}
+#mauve .st3{fill:#53C7E9;}
+#mauve .st4{fill:#2EA6DD;}
+#mauve .st5{fill:#F59222;}
+#mauve .st6{fill:#3EB44A;}
+#mauve .st7{fill:#9954A0;}
+#mauve .st8{fill:#CB9EC8;stroke:#FFFFFF;stroke-width:0.25;stroke-miterlimit:10;}
+#mauve .st9{fill:#F59222;stroke:#F59222;stroke-width:0.5;}
+#mauve .st10{font-family:'OratorStd';}
+#mauve .st11{font-size:17.0812px;}
+
+    
+#paupiere{
+animation: paupiere 5s linear 3s infinite;
+}
+
+@keyframes paupiere {
+    0%{transform: translateY(0%);}
+    2%{transform: translateY(100%);}
+    4%{transform: translateY(100%)}
+    5%{transform: translateY(0%)}
+    100%{transform: translateY(0%)}
+}
+
+
+/*RESPONSIVE*/
+
+/*    points de rupture : 1200 1024 900 768 720 640 480 360*/
+
+/* 4K etc.*/
+     @media (min-width: 1600px) {
+        html {
+        font-size: 1vw !important;
+        }
+        
+        body {
+        max-width: inherit !important;
+        } 
+     }
+
+/*      taille police globale en paysage*/
+
+     @media (max-width: 1200px) {
+        
+        html {
+        font-size: 14px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        html {
+        font-size: 13px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        html {
+        font-size: 12px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        
+         html {
+        font-size: 11px;
+        }
+    }
+   
+    @media (max-width: 640px) {
+        html{
+        font-size: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        html{
+        font-size: 10px;
+        }
+    }
+
+/*    Pour Ipad et autres supports en mode paysage avec hauteur supérieur à 515px : main plus important pour prendre de la place en hauteur */
+    @media (max-width: 1024px) and (min-height: 515px) and (orientation: landscape){
+        main{
+/*        pour être sûr que la partie centrale est à peu près centrée qqsoit le format de tablette on lui donne une hauteur de 70%, la div jeux suit avec une hauteur de 100%*/
+        height: 80%;
+        padding-top: 5%;
+        }
+        
+        #jeux{
+        height: 100%;
+        }
+    }
+    
+
+    @media (max-width: 768px) and (orientation: landscape){
+        
+        main{
+/*        pour être sûr que la partie centrale est à peu près centrée qqsoit le format de tablette on lui donne une hauteur min de 70%, la div jeux suit avec une hauteur de 100%*/
+        height: 70%; 
+        }
+        
+        #jeux{
+        height: 100%;
+        }
+        
+/*   Et on donne une hauteur min au body*/
+        body{
+        min-height: 430px;
+        }
+    }
+
+    @media (max-width: 720px)and (orientation: landscape){
+       
+        
+        body{
+        min-height: 450px;
+        }
+        
+        main{
+        min-height: 70%; 
+        }
+    }
+
+
+/* On enlève du texte petit à petit */
+ @media (max-width:768px) and (orientation: landscape){
+       
+        #lapinPresente p {
+        display: none;
+        }  
+    }
+ 
+ @media (max-width:640px) and (orientation: landscape){
+       
+        body{
+        min-height: 350px;
+        }
+
+       
+        #lapinPresente{
+        width: 28%;
+        }
+      
+        article .aSuppr{
+        display: none;
+        }
+     
+        article a:last-of-type{
+        text-transform: capitalize;
+        }
+     
+        article p{
+        height: 30%;
+        }    
+         
+        footer h3 span:nth-of-type(2){
+        display: none;
+        } 
+    }
+
+ @media (max-width: 480px) and (orientation: landscape){
+        
+        body { word-wrap: break-word; }
+     
+        article .aSuppr{
+        display: none;
+        }
+     
+        article a:last-of-type{
+        text-transform: capitalize;
+        }
+        
+        body{
+        min-height: 210px;
+        }
+    }
+    
+
+/*     pour tablettes et gsm en portrait inversion des directions de flex : colonnes en lignes et lignes en colonne et proportions etc.*/
+
+    @media (max-width: 900px) and (orientation: portrait){
+        
+        header, footer, main{
+        width: 90%;
+        }
+        
+        
+        header, footer{
+        height: 15%;
+        }
+        
+        body{
+        min-height: 820px;
+        }
+        
+        main{
+        height: 70%;
+        }
+        
+        #jeux {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        }
+        
+        #lapinPresente {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        }
+            
+        #lapinPresente img {
+        height: 100%;
+        width: 35%;
+        }
+        
+        #lapinPresente p {
+        
+        width: 30%;
+        }
+        
+        #lapinPresente h3 {
+        width: 30%;
+        }
+        
+        article {
+        width: 100%;
+        height: 25%;
+        display: flex;
+        flex-direction:row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        }
+        
+        article > a:first-of-type {
+        min-width: 80px;
+        min-height: 80px;
+        }
+        
+        #jeux a:last-of-type {
+        width: 25%;
+        }
+        
+        article > p {
+        width: 40%;
+        height: 80%;
+/*        line-height: 1.8;*/
+        }
+        
+        main > a {
+        display: block;
+        text-align: center;
+        position: absolute;
+        top: 4%;
+        right: 4%;
+        }
+        
+    }
+     @media (max-width: 640px) and (orientation: portrait){
+       
+        body{
+        min-height: 530px;
+        }
+         
+        #lapinPresente h3 {
+        width: 30%;
+        }
+        
+        
+        article > a:first-of-type {
+        min-width: 80px;
+        min-height: 80px;
+        }
+        
+        
+        article > p {
+        width: 40%;
+        height: 100%;
+/*        line-height: 1.8;*/
+        }
+        
+    }
+
+     @media (max-width: 480px) and (orientation: portrait){
+       
+        header h3{
+        font-size: 10px;
+        }
+         
+         body{
+         min-height: 488px;
+         }
+         
+         article .aSuppr{
+         display: none;
+         }
+         
+         #titreASuppr{
+         display: none;
+         }
+         
+         #lapinPresente h3 {
+         width: 55%;
+         }
+         
+         #lapinPresente p {
+         display: none;
+         }
+         
+         article p{
+         height: 60%;
+         }
+         
+         article a:last-of-type{
+         text-transform: capitalize;
+         }
+     
+         footer h3 span:not(:last-of-type){
+         display: none;
+         } 
+    }
+
+
+    @media (max-width: 360px) and (orientation: portrait){
+        html{
+        font-size: 8px;
+        }
+        
+
+        header > h3{
+        font-size: 1.8rem;
+        }
+        
+        footer h3 > span:last-of-type{
+        font-size: 1.3rem;
+        }
+        
+        
+    }
+        
+     
+
+/*
+     @media (max-width: 360px) and (orientation: portrait){
+       
+         html{
+         font-size: 08px; 
+         }
+    }
+       
+*/
+
+
+
