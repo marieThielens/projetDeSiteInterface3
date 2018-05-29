@@ -1,6 +1,8 @@
-# projetDeSiteInterface3
+# projet De Site : Interface3
 
 ## Travail de groupe, mon tout premier site
+
+Aperçu du réslutat : https://mariethielens.github.io/projetDeSiteInterface3/
 
 - Contexte
 
