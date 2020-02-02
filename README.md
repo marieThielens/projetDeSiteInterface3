@@ -10,4 +10,4 @@ Travail de mi-formation à interface3. Faire un site pour un client fictif. Il f
 
 - Partenaire
 
-Céline Djermag
+Céline Dj
